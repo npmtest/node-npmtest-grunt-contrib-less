@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-grunt-contrib-less/grunt-contrib-less/tasks/less.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-grunt-contrib-less/node_modules/grunt-contrib-less/tasks/less.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -194,7 +192,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-grunt-contrib-less">npmtest-grunt-contrib-less (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-grunt-contrib-less/grunt-contrib-less/tasks/less.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-grunt-contrib-less/node_modules/grunt-contrib-less/tasks/less.js</span></h1>
     <h2>
         
         Statements: <span class="metric">6.19% <small>(6 / 97)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-grunt-contrib-less/grunt-contrib-less/tasks/</a> &#187; less.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> » <a href="index.html">node-npmtest-grunt-contrib-less/node_modules/grunt-contrib-less/tasks/</a> » less.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -626,120 +624,120 @@ var async = require('async');
 var chalk = require('chalk');
 var less = require('less');
 &nbsp;
-module.exports = <span class="fstat-no" title="function not covered" >function(grunt) {</span>
-<span class="cstat-no" title="statement not covered" >  grunt.registerMultiTask('less', 'Compile LESS files to CSS', <span class="fstat-no" title="function not covered" >function() {</span></span>
-<span class="cstat-no" title="statement not covered" >    var done = this.async();</span>
+module.exports = <span class="fstat-no" title="function not covered">function(grunt) {</span>
+<span class="cstat-no" title="statement not covered">  grunt.registerMultiTask('less', 'Compile LESS files to CSS', <span class="fstat-no" title="function not covered">function() {</span></span>
+<span class="cstat-no" title="statement not covered">    var done = this.async();</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var options = this.options({</span>
+<span class="cstat-no" title="statement not covered">    var options = this.options({</span>
       banner: ''
     });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (this.files.length &lt; 1) {</span>
-<span class="cstat-no" title="statement not covered" >      grunt.verbose.warn('Destination not written because no source files were provided.');</span>
+<span class="cstat-no" title="statement not covered">    if (this.files.length &lt; 1) {</span>
+<span class="cstat-no" title="statement not covered">      grunt.verbose.warn('Destination not written because no source files were provided.');</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var tally = {</span>
+<span class="cstat-no" title="statement not covered">    var tally = {</span>
       sheets: 0,
       maps: 0
     };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    async.eachSeries(this.files, <span class="fstat-no" title="function not covered" >function(f, nextFileObj) {</span></span>
-<span class="cstat-no" title="statement not covered" >      var destFile = f.dest;</span>
+<span class="cstat-no" title="statement not covered">    async.eachSeries(this.files, <span class="fstat-no" title="function not covered">function(f, nextFileObj) {</span></span>
+<span class="cstat-no" title="statement not covered">      var destFile = f.dest;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      var files = f.src.filter(<span class="fstat-no" title="function not covered" >function(filepath) {</span></span>
+<span class="cstat-no" title="statement not covered">      var files = f.src.filter(<span class="fstat-no" title="function not covered">function(filepath) {</span></span>
         // Warn on and remove invalid source files (if nonull was set).
-<span class="cstat-no" title="statement not covered" >        if (!grunt.file.exists(filepath)) {</span>
-<span class="cstat-no" title="statement not covered" >          grunt.log.warn('Source file "' + filepath + '" not found.');</span>
-<span class="cstat-no" title="statement not covered" >          return false;</span>
+<span class="cstat-no" title="statement not covered">        if (!grunt.file.exists(filepath)) {</span>
+<span class="cstat-no" title="statement not covered">          grunt.log.warn('Source file "' + filepath + '" not found.');</span>
+<span class="cstat-no" title="statement not covered">          return false;</span>
         }
-<span class="cstat-no" title="statement not covered" >        return true;</span>
+<span class="cstat-no" title="statement not covered">        return true;</span>
       });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      if (files.length === 0) {</span>
-<span class="cstat-no" title="statement not covered" >        if (f.src.length &lt; 1) {</span>
-<span class="cstat-no" title="statement not covered" >          grunt.log.warn('Destination ' + chalk.cyan(destFile) + ' not written because no source files were found.');</span>
+<span class="cstat-no" title="statement not covered">      if (files.length === 0) {</span>
+<span class="cstat-no" title="statement not covered">        if (f.src.length &lt; 1) {</span>
+<span class="cstat-no" title="statement not covered">          grunt.log.warn('Destination ' + chalk.cyan(destFile) + ' not written because no source files were found.');</span>
         }
 &nbsp;
         // No src files, goto next target. Warn would have been issued above.
-<span class="cstat-no" title="statement not covered" >        return nextFileObj();</span>
+<span class="cstat-no" title="statement not covered">        return nextFileObj();</span>
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      var compiled = [];</span>
-<span class="cstat-no" title="statement not covered" >      var i = 0;</span>
+<span class="cstat-no" title="statement not covered">      var compiled = [];</span>
+<span class="cstat-no" title="statement not covered">      var i = 0;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      async.concatSeries(files, <span class="fstat-no" title="function not covered" >function(file, next) {</span></span>
-<span class="cstat-no" title="statement not covered" >        if (i++ &gt; 0) {</span>
-<span class="cstat-no" title="statement not covered" >          options.banner = '';</span>
+<span class="cstat-no" title="statement not covered">      async.concatSeries(files, <span class="fstat-no" title="function not covered">function(file, next) {</span></span>
+<span class="cstat-no" title="statement not covered">        if (i++ &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered">          options.banner = '';</span>
         }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        compileLess(file, destFile, options)</span>
-          .then(<span class="fstat-no" title="function not covered" >function(output) {</span>
-<span class="cstat-no" title="statement not covered" >            compiled.push(output.css);</span>
-<span class="cstat-no" title="statement not covered" >            if (options.sourceMap &amp;&amp; !options.sourceMapFileInline) {</span>
-<span class="cstat-no" title="statement not covered" >              var sourceMapFilename = options.sourceMapFilename;</span>
-<span class="cstat-no" title="statement not covered" >              if (!sourceMapFilename) {</span>
-<span class="cstat-no" title="statement not covered" >                sourceMapFilename = destFile + '.map';</span>
+<span class="cstat-no" title="statement not covered">        compileLess(file, destFile, options)</span>
+          .then(<span class="fstat-no" title="function not covered">function(output) {</span>
+<span class="cstat-no" title="statement not covered">            compiled.push(output.css);</span>
+<span class="cstat-no" title="statement not covered">            if (options.sourceMap &amp;&amp; !options.sourceMapFileInline) {</span>
+<span class="cstat-no" title="statement not covered">              var sourceMapFilename = options.sourceMapFilename;</span>
+<span class="cstat-no" title="statement not covered">              if (!sourceMapFilename) {</span>
+<span class="cstat-no" title="statement not covered">                sourceMapFilename = destFile + '.map';</span>
               }
-<span class="cstat-no" title="statement not covered" >              grunt.file.write(sourceMapFilename, output.map);</span>
-<span class="cstat-no" title="statement not covered" >              grunt.verbose.writeln('File ' + chalk.cyan(sourceMapFilename) + ' created.');</span>
-<span class="cstat-no" title="statement not covered" >              tally.maps++;</span>
+<span class="cstat-no" title="statement not covered">              grunt.file.write(sourceMapFilename, output.map);</span>
+<span class="cstat-no" title="statement not covered">              grunt.verbose.writeln('File ' + chalk.cyan(sourceMapFilename) + ' created.');</span>
+<span class="cstat-no" title="statement not covered">              tally.maps++;</span>
             }
-<span class="cstat-no" title="statement not covered" >            process.nextTick(next);</span>
+<span class="cstat-no" title="statement not covered">            process.nextTick(next);</span>
           },
-<span class="fstat-no" title="function not covered" >          function(err) {</span>
-<span class="cstat-no" title="statement not covered" >            nextFileObj(err);</span>
+<span class="fstat-no" title="function not covered">          function(err) {</span>
+<span class="cstat-no" title="statement not covered">            nextFileObj(err);</span>
           });
-      }, <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >        if (compiled.length &lt; 1) {</span>
-<span class="cstat-no" title="statement not covered" >          grunt.log.warn('Destination ' + chalk.cyan(destFile) + ' not written because compiled files were empty.');</span>
+      }, <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">        if (compiled.length &lt; 1) {</span>
+<span class="cstat-no" title="statement not covered">          grunt.log.warn('Destination ' + chalk.cyan(destFile) + ' not written because compiled files were empty.');</span>
         } else {
-<span class="cstat-no" title="statement not covered" >          var allCss = compiled.join(options.compress ? '' : grunt.util.normalizelf(grunt.util.linefeed));</span>
-<span class="cstat-no" title="statement not covered" >          grunt.file.write(destFile, allCss);</span>
-<span class="cstat-no" title="statement not covered" >          grunt.verbose.writeln('File ' + chalk.cyan(destFile) + ' created');</span>
-<span class="cstat-no" title="statement not covered" >          tally.sheets++;</span>
+<span class="cstat-no" title="statement not covered">          var allCss = compiled.join(options.compress ? '' : grunt.util.normalizelf(grunt.util.linefeed));</span>
+<span class="cstat-no" title="statement not covered">          grunt.file.write(destFile, allCss);</span>
+<span class="cstat-no" title="statement not covered">          grunt.verbose.writeln('File ' + chalk.cyan(destFile) + ' created');</span>
+<span class="cstat-no" title="statement not covered">          tally.sheets++;</span>
         }
-<span class="cstat-no" title="statement not covered" >        nextFileObj();</span>
+<span class="cstat-no" title="statement not covered">        nextFileObj();</span>
       });
 &nbsp;
-    }, <span class="fstat-no" title="function not covered" >function () {</span>
-<span class="cstat-no" title="statement not covered" >      if (tally.sheets) {</span>
-<span class="cstat-no" title="statement not covered" >        grunt.log.ok(tally.sheets + ' ' + grunt.util.pluralize(tally.sheets, 'stylesheet/stylesheets') + ' created.');</span>
+    }, <span class="fstat-no" title="function not covered">function () {</span>
+<span class="cstat-no" title="statement not covered">      if (tally.sheets) {</span>
+<span class="cstat-no" title="statement not covered">        grunt.log.ok(tally.sheets + ' ' + grunt.util.pluralize(tally.sheets, 'stylesheet/stylesheets') + ' created.');</span>
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      if (tally.maps) {</span>
-<span class="cstat-no" title="statement not covered" >        grunt.log.ok(tally.maps + ' ' + grunt.util.pluralize(tally.maps, 'sourcemap/sourcemaps') + ' created.');</span>
+<span class="cstat-no" title="statement not covered">      if (tally.maps) {</span>
+<span class="cstat-no" title="statement not covered">        grunt.log.ok(tally.maps + ' ' + grunt.util.pluralize(tally.maps, 'sourcemap/sourcemaps') + ' created.');</span>
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      done();</span>
+<span class="cstat-no" title="statement not covered">      done();</span>
     });
   });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var compileLess = <span class="fstat-no" title="function not covered" >function(srcFile, destFile, options) {</span></span>
-<span class="cstat-no" title="statement not covered" >    options = _.assign({filename: srcFile}, options);</span>
-<span class="cstat-no" title="statement not covered" >    options.paths = options.paths || [path.dirname(srcFile)];</span>
+<span class="cstat-no" title="statement not covered">  var compileLess = <span class="fstat-no" title="function not covered">function(srcFile, destFile, options) {</span></span>
+<span class="cstat-no" title="statement not covered">    options = _.assign({filename: srcFile}, options);</span>
+<span class="cstat-no" title="statement not covered">    options.paths = options.paths || [path.dirname(srcFile)];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (typeof options.paths === 'function') {</span>
-<span class="cstat-no" title="statement not covered" >      try {</span>
-<span class="cstat-no" title="statement not covered" >        options.paths = options.paths(srcFile);</span>
+<span class="cstat-no" title="statement not covered">    if (typeof options.paths === 'function') {</span>
+<span class="cstat-no" title="statement not covered">      try {</span>
+<span class="cstat-no" title="statement not covered">        options.paths = options.paths(srcFile);</span>
       } catch (e) {
-<span class="cstat-no" title="statement not covered" >        grunt.fail.warn(wrapError(e, 'Generating @import paths failed.'));</span>
+<span class="cstat-no" title="statement not covered">        grunt.fail.warn(wrapError(e, 'Generating @import paths failed.'));</span>
       }
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (options.sourceMap &amp;&amp; !options.sourceMapFileInline &amp;&amp; !options.sourceMapFilename) {</span>
-<span class="cstat-no" title="statement not covered" >      options.sourceMapFilename = path.basename(destFile) + '.map';</span>
+<span class="cstat-no" title="statement not covered">    if (options.sourceMap &amp;&amp; !options.sourceMapFileInline &amp;&amp; !options.sourceMapFilename) {</span>
+<span class="cstat-no" title="statement not covered">      options.sourceMapFilename = path.basename(destFile) + '.map';</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (typeof options.sourceMapBasepath === 'function') {</span>
-<span class="cstat-no" title="statement not covered" >      try {</span>
-<span class="cstat-no" title="statement not covered" >        options.sourceMapBasepath = options.sourceMapBasepath(srcFile);</span>
+<span class="cstat-no" title="statement not covered">    if (typeof options.sourceMapBasepath === 'function') {</span>
+<span class="cstat-no" title="statement not covered">      try {</span>
+<span class="cstat-no" title="statement not covered">        options.sourceMapBasepath = options.sourceMapBasepath(srcFile);</span>
       } catch (e) {
-<span class="cstat-no" title="statement not covered" >        grunt.fail.warn(wrapError(e, 'Generating sourceMapBasepath failed.'));</span>
+<span class="cstat-no" title="statement not covered">        grunt.fail.warn(wrapError(e, 'Generating sourceMapBasepath failed.'));</span>
       }
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (typeof options.sourceMap === 'boolean' &amp;&amp; options.sourceMap) {</span>
-<span class="cstat-no" title="statement not covered" >      options.sourceMap = {</span>
+<span class="cstat-no" title="statement not covered">    if (typeof options.sourceMap === 'boolean' &amp;&amp; options.sourceMap) {</span>
+<span class="cstat-no" title="statement not covered">      options.sourceMap = {</span>
         sourceMapBasepath: options.sourceMapBasepath,
         sourceMapFilename: options.sourceMapFilename,
         sourceMapInputFilename: options.sourceMapInputFilename,
@@ -751,68 +749,69 @@ module.exports = <span class="fstat-no" title="function not covered" >function(g
       };
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var srcCode = grunt.file.read(srcFile);</span>
+<span class="cstat-no" title="statement not covered">    var srcCode = grunt.file.read(srcFile);</span>
 &nbsp;
     // Equivalent to --modify-vars option.
     // Properties under options.modifyVars are appended as less variables
     // to override global variables.
-<span class="cstat-no" title="statement not covered" >    var modifyVarsOutput = parseVariableOptions(options.modifyVars);</span>
-<span class="cstat-no" title="statement not covered" >    if (modifyVarsOutput) {</span>
-<span class="cstat-no" title="statement not covered" >      srcCode += '\n' + modifyVarsOutput;</span>
+<span class="cstat-no" title="statement not covered">    var modifyVarsOutput = parseVariableOptions(options.modifyVars);</span>
+<span class="cstat-no" title="statement not covered">    if (modifyVarsOutput) {</span>
+<span class="cstat-no" title="statement not covered">      srcCode += '\n' + modifyVarsOutput;</span>
     }
 &nbsp;
     // Load custom functions
-<span class="cstat-no" title="statement not covered" >    if (options.customFunctions) {</span>
-<span class="cstat-no" title="statement not covered" >      Object.keys(options.customFunctions).forEach(<span class="fstat-no" title="function not covered" >function(name) {</span></span>
-<span class="cstat-no" title="statement not covered" >        less.functions.functionRegistry.add(name.toLowerCase(), <span class="fstat-no" title="function not covered" >function() {</span></span>
-<span class="cstat-no" title="statement not covered" >          var args = [].slice.call(arguments);</span>
-<span class="cstat-no" title="statement not covered" >          args.unshift(less);</span>
-<span class="cstat-no" title="statement not covered" >          var res = options.customFunctions[name].apply(this, args);</span>
-<span class="cstat-no" title="statement not covered" >          return typeof res === 'object' ? res : new less.tree.Anonymous(res);</span>
+<span class="cstat-no" title="statement not covered">    if (options.customFunctions) {</span>
+<span class="cstat-no" title="statement not covered">      Object.keys(options.customFunctions).forEach(<span class="fstat-no" title="function not covered">function(name) {</span></span>
+<span class="cstat-no" title="statement not covered">        less.functions.functionRegistry.add(name.toLowerCase(), <span class="fstat-no" title="function not covered">function() {</span></span>
+<span class="cstat-no" title="statement not covered">          var args = [].slice.call(arguments);</span>
+<span class="cstat-no" title="statement not covered">          args.unshift(less);</span>
+<span class="cstat-no" title="statement not covered">          var res = options.customFunctions[name].apply(this, args);</span>
+<span class="cstat-no" title="statement not covered">          return typeof res === 'object' ? res : new less.tree.Anonymous(res);</span>
         });
       });
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return less.render(srcCode, options)</span>
-      .catch(<span class="fstat-no" title="function not covered" >function(err) {</span>
-<span class="cstat-no" title="statement not covered" >        lessError(err, srcFile);</span>
-<span class="cstat-no" title="statement not covered" >        throw err;</span>
+<span class="cstat-no" title="statement not covered">    return less.render(srcCode, options)</span>
+      .catch(<span class="fstat-no" title="function not covered">function(err) {</span>
+<span class="cstat-no" title="statement not covered">        lessError(err, srcFile);</span>
+<span class="cstat-no" title="statement not covered">        throw err;</span>
       });
   };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var parseVariableOptions = <span class="fstat-no" title="function not covered" >function(options) {</span></span>
-<span class="cstat-no" title="statement not covered" >    var pairs = _.toPairs(options);</span>
-<span class="cstat-no" title="statement not covered" >    var output = '';</span>
-<span class="cstat-no" title="statement not covered" >    pairs.forEach(<span class="fstat-no" title="function not covered" >function(pair) {</span></span>
-<span class="cstat-no" title="statement not covered" >      output += '@' + pair[0] + ':' + pair[1] + ';';</span>
+<span class="cstat-no" title="statement not covered">  var parseVariableOptions = <span class="fstat-no" title="function not covered">function(options) {</span></span>
+<span class="cstat-no" title="statement not covered">    var pairs = _.toPairs(options);</span>
+<span class="cstat-no" title="statement not covered">    var output = '';</span>
+<span class="cstat-no" title="statement not covered">    pairs.forEach(<span class="fstat-no" title="function not covered">function(pair) {</span></span>
+<span class="cstat-no" title="statement not covered">      output += '@' + pair[0] + ':' + pair[1] + ';';</span>
     });
-<span class="cstat-no" title="statement not covered" >    return output;</span>
+<span class="cstat-no" title="statement not covered">    return output;</span>
   };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var formatLessError = <span class="fstat-no" title="function not covered" >function(e) {</span></span>
-<span class="cstat-no" title="statement not covered" >    var pos = '[' + 'L' + e.line + ':' + ('C' + e.column) + ']';</span>
-<span class="cstat-no" title="statement not covered" >    return e.filename + ': ' + pos + ' ' + e.message;</span>
+<span class="cstat-no" title="statement not covered">  var formatLessError = <span class="fstat-no" title="function not covered">function(e) {</span></span>
+<span class="cstat-no" title="statement not covered">    var pos = '[' + 'L' + e.line + ':' + ('C' + e.column) + ']';</span>
+<span class="cstat-no" title="statement not covered">    return e.filename + ': ' + pos + ' ' + e.message;</span>
   };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var lessError = <span class="fstat-no" title="function not covered" >function(e, file) {</span></span>
-<span class="cstat-no" title="statement not covered" >    var message = less.formatError ? less.formatError(e) : formatLessError(e);</span>
+<span class="cstat-no" title="statement not covered">  var lessError = <span class="fstat-no" title="function not covered">function(e, file) {</span></span>
+<span class="cstat-no" title="statement not covered">    var message = less.formatError ? less.formatError(e) : formatLessError(e);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    grunt.log.error(message);</span>
-<span class="cstat-no" title="statement not covered" >    grunt.fail.warn('Error compiling ' + file);</span>
+<span class="cstat-no" title="statement not covered">    grunt.log.error(message);</span>
+<span class="cstat-no" title="statement not covered">    grunt.fail.warn('Error compiling ' + file);</span>
   };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var wrapError = <span class="fstat-no" title="function not covered" >function (e, message) {</span></span>
-<span class="cstat-no" title="statement not covered" >    var err = new Error(message);</span>
-<span class="cstat-no" title="statement not covered" >    err.origError = e;</span>
-<span class="cstat-no" title="statement not covered" >    return err;</span>
+<span class="cstat-no" title="statement not covered">  var wrapError = <span class="fstat-no" title="function not covered">function (e, message) {</span></span>
+<span class="cstat-no" title="statement not covered">    var err = new Error(message);</span>
+<span class="cstat-no" title="statement not covered">    err.origError = e;</span>
+<span class="cstat-no" title="statement not covered">    return err;</span>
   };
 };
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 09:52:19 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Mon Apr 17 2017 11:00:07 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
