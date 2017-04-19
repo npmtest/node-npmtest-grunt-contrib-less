@@ -1,4 +1,7 @@
-# test coverage for  [grunt-contrib-less (v1.4.1)](https://github.com/gruntjs/grunt-contrib-less#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-grunt-contrib-less.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-grunt-contrib-less) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-grunt-contrib-less.svg)](https://travis-ci.org/npmtest/node-npmtest-grunt-contrib-less)
+# npmtest-grunt-contrib-less
+
+#### test coverage for  [grunt-contrib-less (v1.4.1)](https://github.com/gruntjs/grunt-contrib-less#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-grunt-contrib-less.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-grunt-contrib-less) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-grunt-contrib-less.svg)](https://travis-ci.org/npmtest/node-npmtest-grunt-contrib-less)
+
 #### Compile LESS files to CSS
 
 [![NPM](https://nodei.co/npm/grunt-contrib-less.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/grunt-contrib-less)
