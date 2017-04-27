@@ -1,6 +1,6 @@
 # npmtest-grunt-contrib-less
 
-#### test coverage for  [grunt-contrib-less (v1.4.1)](https://github.com/gruntjs/grunt-contrib-less#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-grunt-contrib-less.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-grunt-contrib-less) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-grunt-contrib-less.svg)](https://travis-ci.org/npmtest/node-npmtest-grunt-contrib-less)
+#### basic test coverage for  [grunt-contrib-less (v1.4.1)](https://github.com/gruntjs/grunt-contrib-less#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-grunt-contrib-less.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-grunt-contrib-less) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-grunt-contrib-less.svg)](https://travis-ci.org/npmtest/node-npmtest-grunt-contrib-less)
 
 #### Compile LESS files to CSS
 
@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-grunt-contrib-less/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-grunt-contrib-less/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-grunt-contrib-less/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-grunt-contrib-less/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-grunt-contrib-less/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-grunt-contrib-less/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-grunt-contrib-less/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-grunt-contrib-less/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-grunt-contrib-less/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-grunt-contrib-less/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-grunt-contrib-less/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-grunt-contrib-less/build/coverage.html/index.html)
 
@@ -146,7 +146,8 @@
     "scripts": {
         "test": "grunt test"
     },
-    "version": "1.4.1"
+    "version": "1.4.1",
+    "bin": {}
 }
 ```
 
